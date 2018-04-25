@@ -17,9 +17,10 @@
                 reviews: resObj.items[i].volumeInfo.ratingsCount,
                 rate: resObj.items[i].volumeInfo.averageRating, 
                 img: resObj.items[i].volumeInfo.imageLinks.thumbnail})
-              upDateDOM()
+              
               console.log(resObj)
         }
+        upDateDOM()
       }
     }
     // Send an asynchronous HTTP GET request to the given end point (url)
@@ -27,10 +28,6 @@
     xhttp.send();
   }
   // Default sort
-  sortByReviews()
-  upDateDOM()
-
-
   function createBookItem(bookObj) {
 
     var liElem = document.createElement('li')
@@ -81,18 +78,6 @@
     books.sort(function (a, b) {
       return b.reviews - a.reviews;
     })
-  }
-  function sortByPriceLow() {
-    books.sort(function (a, b) {
-      return a.Price - b.Price;
-    })
-  }
-  function sortByPriceHigh() {
-    books.sort(function (a, b) {
-      return b.Price - a.Price;
-  
-    })
-  }
   function sortByRating() {
     books.sort(function (a, b) {
       return b.rate - a.rate;
@@ -126,14 +111,6 @@
   select.onchange = function () {
     if (select.value === 'Default') {
       sortByReviews()
-      upDateDOM()
-    }
-    else if (select.value === 'PriceLow') {
-      sortByPriceLow()
-      upDateDOM()
-    }
-    else if (select.value === 'PriceHigh') {
-      sortByPriceHigh()
       upDateDOM()
     }
     else if (select.value === 'Rating') {
