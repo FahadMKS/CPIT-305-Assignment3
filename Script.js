@@ -9,6 +9,7 @@
       if (this.readyState == 4 && this.status == 200) {
         console.log(xhttp.responseText)
         var resObj = JSON.parse(xhttp.responseText);
+        //Taking just the first 5 books
         for (let i = 0; i < 5; i++) {
             books.push({
                 title: resObj.items[i].volumeInfo.title ,
