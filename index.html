@@ -1,40 +1,38 @@
-<!DOCTYPE HTML>
-<html>
+    <!DOCTYPE HTML>
+    <html>
 
-<head>
-    <title>Fahad Majed Al-Sayyali - 1536156 </title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <title>Fahad Majed Al-Sayyali - 1536156 </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
+    <body>
 
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#contact">Categories</a>
-        <a href="#about">About Us</a>
-    </div>
-    <hr>
-    <br>
-    <h5>Search for books:
-    <input type="text" placeholder="Name of the book..." id="book" />
-    <button onclick="doClick()">Search</button></h5>
-    <div id="sort-wrap">
-        <h5>Sort By:
-            <select id="sort-books">
-                <option value="Default">Reviews (Default)</option>
-                <option value="PriceHigh">Price high to low</option>
-                <option value="PriceLow">Price low to high</option>
-                <option value="Rating">Rating</option>
-                <option value="New">Newest</option>
-                <option value="Old">Oldest</option>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#contact">Categories</a>
+            <a href="#about">About Us</a>
+        </div>
+        <hr>
+        <br>
+        <h5>Search for books:
+        <input type="text" placeholder="Name of the book..." id="book"/>
+        <button onclick="doClick()">Search</button></h5>
+        <div id="sort-wrap">
+            <h5>Sort By:
+                <select id="sort-books">
+                    <option value="Default">Reviews (Default)</option>
+                    <option value="PriceHigh">Price high to low</option>
+                    <option value="PriceLow">Price low to high</option>
+                    <option value="Rating">Rating</option>
+                    <option value="New">Newest</option>
+                    <option value="Old">Oldest</option>
+                </select>
+            </h5>
+        </div>
+        <ul id="books-list"></ul>
+        <script src="Script.js"></script>
 
-                <!-- add a few more sort criteria -->
-            </select>
-        </h5>
-    </div>
-    <ul id="books-list"></ul>
-    <script src="Script.js"></script>
+    </body>
 
-</body>
-
-</html>
+    </html>
